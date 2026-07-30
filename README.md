@@ -50,18 +50,38 @@
 
 ### 安装
 
+#### Claude Code 用户
+
+1. 确保你已安装 [Claude Code](https://claude.ai/code)
+
+2. 下载 Skill 文件：
 ```bash
 curl -o ~/.claude/skills/gaomidu.md https://raw.githubusercontent.com/AIPMAndy/GaoMiDuSkill/main/gaomidu.md
 ```
 
 或手动下载 `gaomidu.md` 并放到 `~/.claude/skills/` 目录
 
+#### Codex 用户
+
+1. 确保你已安装 [Codex](https://github.com/familyboat/codex)
+
+2. 下载 `.clinerules` 文件：
+```bash
+curl -o ~/.codex/.clinerules-gaomidu https://raw.githubusercontent.com/AIPMAndy/GaoMiDuSkill/main/gaomidu.clinerules
+```
+
+或手动下载 `gaomidu.clinerules` 并放到 `~/.codex/` 目录（重命名为 `.clinerules-gaomidu`）
+
 ### 使用
 
-在 Claude Code 中调用：
-
+**Claude Code**：
 ```bash
 /gaomidu
+```
+
+**Codex**：
+```bash
+codex --rules gaomidu "写一篇关于AI对就业市场影响的高密度分析"
 ```
 
 然后告诉它你想创作什么主题的高密度内容！
